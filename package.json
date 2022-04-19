@@ -1,0 +1,50 @@
+{
+  "name": "integnance",
+  "version": "0.0.5",
+  "private": true,
+  "scripts": {
+    "aspida": "pnpm run aspida --filter ./packages/shared",
+    "build:admin": "pnpm run build --filter ./packages/admin",
+    "build:api": "pnpm run build --filter ./packages/api",
+    "build:service": "pnpm run build --filter ./packages/service",
+    "dev:admin": "pnpm run dev --filter ./packages/admin",
+    "dev:api": "pnpm run dev --filter ./packages/api",
+    "dev:service": "pnpm run dev --filter ./packages/service",
+    "format": "rome format .",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint ./packages/** --ext .jsx,.js,.ts,.tsx --quiet --ignore-path ./.gitignore",
+    "lint-fix": "eslint ./packages/** --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "sort": "sort-package-json 'package.json' sort-package-json './packages/admin/package.json' sort-package-json './packages/backend/package.json'",
+    "start:api": "pnpm run start --filter ./packages/api",
+    "test:admin": "pnpm run test --filter ./packages/admin",
+    "test:api": "pnpm run test --filter ./packages/api",
+    "test:service": "pnpm run test --filter ./packages/service",
+    "update-dependencies": "ncu -u && ncu -u --packageFile ./packages/admin/package.json && ncu -u --packageFile ./packages/api/package.json && ncu -u --packageFile ./packages/service/package.json",
+    "update-dependencies-check": "ncu && ncu --packageFile ./packages/admin/package.json && ncu -u --packageFile ./packages/api/package.json && ncu -u --packageFile ./packages/service/package.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "format"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "husky": "^7.0.4",
+    "rome": "^0.4.2-next",
+    "@typescript-eslint/eslint-plugin": "5.16.0",
+    "@typescript-eslint/parser": "5.16.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "sort-package-json": "1.55.0"
+  },
+  "packageManager": "pnpm@6.32.3",
+  "engines": {
+    "node": "16.14.2",
+    "pnpm": "6.32.3"
+  }
+}

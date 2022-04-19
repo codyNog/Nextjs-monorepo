@@ -1,0 +1,4 @@
+packages:
+  - 'packages/admin/**'
+  - 'packages/shared/**'
+  - 'packages/service/**'

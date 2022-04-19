@@ -1,0 +1,23 @@
+{
+  "name": "@my/shared",
+  "version": "0.0.1",
+  "dependencies": {
+    "@anatine/zod-mock": "3.1.1",
+    "@anatine/zod-openapi": "1.3.0",
+    "@aspida/axios": "1.9.1",
+    "@storybook/react": "6.4.8",
+    "aspida": "1.9.1",
+    "axios": "0.19.2",
+    "swr": "1.3.0",
+    "zod": "3.14.4"
+  },
+  "scripts": {
+    "aspida": "aspida",
+    "test": "vitest run --silent"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "typescript": "^4.6.3",
+    "vitest": "^0.9.3"
+  }
+}
